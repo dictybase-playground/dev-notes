@@ -9,3 +9,5 @@
 Run GO applications from the command line by using `/` before the name of the binary.
 
 [Guide on testing IE in VirtualBox/Vagrant on a Mac](https://bluegg.co.uk/writing/testing-ie-in-a-virtualbox-in-a-vagrant-in-a-mac-in-a-bluegg)
+
+[React Patterns](https://reactpatterns.com/)
