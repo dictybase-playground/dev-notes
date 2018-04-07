@@ -17,3 +17,10 @@
 
 ### Markdown
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+### Documentation
+- [React](https://reactjs.org/docs/hello-world.html)
+- [Redux](https://redux.js.org/)
+
+### Resources
+- [Mark Erikson's react-redux-links](https://github.com/markerikson/react-redux-links)
