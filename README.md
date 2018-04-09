@@ -24,3 +24,6 @@
 
 ### Resources
 - [Mark Erikson's react-redux-links](https://github.com/markerikson/react-redux-links)
+
+### Git
+- [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) - branching model for Git
