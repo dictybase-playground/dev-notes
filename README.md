@@ -10,6 +10,7 @@
 
 ### Testing
 - [Guide on testing IE in VirtualBox/Vagrant on a Mac](https://bluegg.co.uk/writing/testing-ie-in-a-virtualbox-in-a-vagrant-in-a-mac-in-a-bluegg)
+- [Updated Vagrantfile for IE testing](https://gist.github.com/anthonysterling/7cb85670b36821122a4a)
 
 ### React concepts
 - [React Patterns](https://reactpatterns.com/)
