@@ -31,3 +31,10 @@
 
 ### Kubernetes
 - [Kubernetes In-Browser Course](https://www.katacoda.com/courses/kubernetes)
+
+### Problem Solving Process
+- Write down how you want to approach the problem
+- Outline how you want to solve it
+- How do you expect it to be solved?
+- Do the problem and see how it is actually solved
+- See if anything differs
