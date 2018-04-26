@@ -29,8 +29,13 @@
 ### Git
 - [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) - branching model for Git
 
-### Kubernetes
+### DevOps
+- [The Twelve-Factor App](https://12factor.net/)
+- [Introduction to Docker](http://blog.brew.com.hk/introduction-to-docker/)
 - [Kubernetes In-Browser Course](https://www.katacoda.com/courses/kubernetes)
+
+### Specifications
+- [JSON API](http://jsonapi.org/)
 
 ### Problem Solving Process
 - Write down how you want to approach the problem
