@@ -43,3 +43,6 @@
 - How do you expect it to be solved?
 - Do the problem and see how it is actually solved
 - See if anything differs
+
+### HTTP Programming
+- [List of HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
