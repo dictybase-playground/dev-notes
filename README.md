@@ -8,6 +8,16 @@
 * [Deployment guide](https://github.com/dictyBase/Migration/blob/master/deploy.md)
 * [gdrive-image-uploadr](https://github.com/dictybase-playground/gdrive-image-uploadr/tree/develop) - has all of the standards to be used in React applications
 
+### Creating new releases
+
+1.  Make sure all tests are passing and write documentation as necessary
+2.  Run `npm run build` to generate the library
+3.  Merge changes into develop, then master
+4.  Tag this release:
+
+* Run `git tag -a v1.0.0 -m "version 1.0.0"` where the version number is the one that needs to be updated
+* Push tag to branch, i.e. `git push origin v1.0.0`
+
 ### Golang
 
 * Run GO applications from the command line by using `/` before the name of the binary.
@@ -49,6 +59,10 @@
 
 * [JSON API](http://jsonapi.org/)
 
+### HTTP Programming
+
+* [List of HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+
 ### Problem Solving Process
 
 * Write down how you want to approach the problem
@@ -56,7 +70,3 @@
 * How do you expect it to be solved?
 * Do the problem and see how it is actually solved
 * See if anything differs
-
-### HTTP Programming
-
-* [List of HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
