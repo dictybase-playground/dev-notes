@@ -12,7 +12,6 @@
 
 * [dicty-components-login](https://github.com/dictyBase/dicty-components-login)
 * [dicty-components-header-footer](https://github.com/dictyBase/dicty-components-header-footer)
-* [dicty-components-navbar](https://github.com/dictyBase/dicty-components-navbar)
 * [dicty-components-tab](https://github.com/dictyBase/dicty-components-tab)
 * [dicty-components-redux](https://github.com/dictybase-playground/dicty-components-redux)
 
