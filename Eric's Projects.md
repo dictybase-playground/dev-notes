@@ -18,5 +18,5 @@
 ### Node scripts
 
 * [Content Loader](https://github.com/dictyBase/content-loader)
-* [User config loader](https://github.com/dictybase-playground/user-config-script)
+* [assign-role-permission](https://github.com/dictybase-docker/assign-role-permission)
 * [html-to-draftjs](https://github.com/dictyBase/html-to-draftjs)
