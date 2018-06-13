@@ -53,6 +53,9 @@
 
 * [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) - branching model for Git
 
+- Delete last commit: `git reset --hard HEAD^`
+- Delete last commit on remote branch: `git push origin +branchName`
+
 ### DevOps
 
 * [The Twelve-Factor App](https://12factor.net/)
