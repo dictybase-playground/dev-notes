@@ -55,6 +55,8 @@
 
 - Delete last commit: `git reset --hard HEAD^`
 - Delete last commit on remote branch: `git push origin +branchName`
+- Delete local branch: `git branch -d feature/login`
+- Delete remote branch: `git push origin --delete feature/login`
 
 ### DevOps
 
