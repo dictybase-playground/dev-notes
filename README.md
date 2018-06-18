@@ -72,6 +72,9 @@
 
 * [List of HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
 
+### Production concepts
+* Analyze bundle size: `source-map-explorer build/static/js/main.*`
+
 ### Problem Solving Process
 
 * Write down how you want to approach the problem
