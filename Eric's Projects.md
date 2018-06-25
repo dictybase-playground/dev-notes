@@ -21,4 +21,5 @@
 
 * [content-loader](https://github.com/dictyBase/content-loader)
 * [assign-role-permission](https://github.com/dictybase-docker/assign-role-permission)
+* [html-to-slatejs](https://github.com/dictybase-playground/html-to-slatejs)
 * [html-to-draftjs](https://github.com/dictyBase/html-to-draftjs)
