@@ -64,6 +64,16 @@
 * [Introduction to Docker](http://blog.brew.com.hk/introduction-to-docker/)
 * [Kubernetes In-Browser Course](https://www.katacoda.com/courses/kubernetes)
 
+**Workflow:**
+1. Push changes to develop
+2. Wait for Docker Hub to build it.
+3. Upgrade your chart
+
+*Quick workflow:*
+1. Build it in your machine with any tag
+2. Push it to the Minikube Docker daemon
+3. Upgrade your chart with that particular tag
+
 ### Specifications
 
 * [JSON API](http://jsonapi.org/)
