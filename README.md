@@ -27,6 +27,16 @@
 * [Guide on testing IE in VirtualBox/Vagrant on a Mac](https://bluegg.co.uk/writing/testing-ie-in-a-virtualbox-in-a-vagrant-in-a-mac-in-a-bluegg)
 * [Updated Vagrantfile for IE testing](https://gist.github.com/anthonysterling/7cb85670b36821122a4a)
 
+Questions to ask for test "contracts":
+1) What does it render?
+2) What props does it receive?
+3) What state does it hold?
+4) What does the component do when the user interacts with it?
+5) What is the context the component is rendered in?
+6) What side effects occur as part of the component lifecycle (i.e. componentDidMount)
+7) Does my component render different things under different circumstances?
+8) When I pass a function as a prop, what does my component use it for? Does it call it, or just give it to another component? If it calls it, what does it call it with?
+
 ### React concepts
 
 * [React Patterns](https://reactpatterns.com/)
