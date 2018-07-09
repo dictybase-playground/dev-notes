@@ -27,6 +27,7 @@
 * [Guide on testing IE in VirtualBox/Vagrant on a Mac](https://bluegg.co.uk/writing/testing-ie-in-a-virtualbox-in-a-vagrant-in-a-mac-in-a-bluegg)
 * [Updated Vagrantfile for IE testing](https://gist.github.com/anthonysterling/7cb85670b36821122a4a)
 * [The Right Way to Test React Components](https://medium.freecodecamp.org/the-right-way-to-test-react-components-548a4736ab22)
+* [Writing Tests - Redux](https://redux.js.org/recipes/writing-tests)
 
 Questions to ask for test "contracts":
 1) What does it render?
