@@ -76,6 +76,9 @@ Questions to ask for test "contracts":
 * [Introduction to Docker](http://blog.brew.com.hk/introduction-to-docker/)
 * [Kubernetes In-Browser Course](https://www.katacoda.com/courses/kubernetes)
 
+* Running webapp locally in Docker:
+- `docker run -it -p 9595:9595 [BUILD]`
+
 **Workflow:**
 1. Push changes to develop
 2. Wait for Docker Hub to build it.
