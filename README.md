@@ -95,8 +95,8 @@ Questions to ask for test "contracts":
 1. Push to `develop` -> new image -> pull and test in minikube
 2. Rebase `develop` in `master`, create new tag and push both `master` and tag
 3. New image -> Sidd deploys it to staging cloud
+
 *Remember* update the staging dockerfile as necessary
-The *URL*s should point to the correct backend server both for develop and staging dockerfile
 
 ### Specifications
 
