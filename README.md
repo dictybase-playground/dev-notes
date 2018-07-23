@@ -89,6 +89,13 @@ Questions to ask for test "contracts":
 2. Push it to the Minikube Docker daemon
 3. Upgrade your chart with that particular tag
 
+**Dev/prod workflow:**
+1. Push to `develop` -> new image -> pull and test in minikube
+2. Rebase `develop` in `master`, create new tag and push both `master` and tag
+3. New image -> deploy it to staging cloud
+*Remember* update the staging dockerfile as necessary
+The *URL*s should point to the correct backend server both for develop and staging dockerfile
+
 ### Specifications
 
 * [JSON API](http://jsonapi.org/)
