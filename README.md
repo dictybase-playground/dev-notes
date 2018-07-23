@@ -17,6 +17,8 @@
 
 * Run `git tag -a v1.0.0 -m "version 1.0.0"` where the version number is the one that needs to be updated
 * Push tag to branch, i.e. `git push origin v1.0.0`
+* To delete local tag, run `git tag -d tagName`
+* To delete remote tag, run `git push --delete origin tagName`
 
 ### Golang
 
