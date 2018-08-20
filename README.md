@@ -49,6 +49,7 @@ Questions to ask for test "contracts":
 ### Node.js
 
 * [A guide to create a NodeJS command-line package](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e)
+* [Node.js Best Practices](https://github.com/i0natan/nodebestpractices)
 
 ### Markdown
 
