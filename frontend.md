@@ -59,7 +59,7 @@ Then add this to your `package.json` as well:
 
 + **Additional modules** - For styling and UI, install [Material-UI](https://material-ui.com/)
   ```
-    npm i --save material-ui
+    npm i --save @material-ui/core
   ```
 
 
