@@ -5,8 +5,8 @@
 * [Dicty Stock Center](https://github.com/dictyBase/Dicty-Stock-Center)
 * [Genomepage](https://github.com/dictyBase/Genomepage)
 * [dicty-frontpage](https://github.com/dictyBase/dicty-frontpage)
+* [dictyAccess](https://github.com/dictybase/dictyaccess)
 * [Registration form](https://github.com/dictybase-playground/registration-form)
-* [dictyAccess](https://github.com/dictybase-playground/dictyaccess)
 
 ### Libraries
 
@@ -23,3 +23,4 @@
 * [assign-role-permission](https://github.com/dictybase-docker/assign-role-permission)
 * [html-to-slatejs](https://github.com/dictybase-playground/html-to-slatejs)
 * [html-to-draftjs](https://github.com/dictyBase/html-to-draftjs)
+* [gff3-convert](https://github.com/dictybase-playground/gff3-convert)
