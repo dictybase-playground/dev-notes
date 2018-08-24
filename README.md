@@ -89,7 +89,7 @@ Questions to ask for test "contracts":
 
 *Quick workflow:*
 1. Build it in your machine with any tag
-2. Push it to the Minikube Docker daemon
+2. Push it to the Minikube Docker daemon (activate with `eval $(minikube docker-env)`)
 3. Upgrade your chart with that particular tag
 - `helm install [CHART] --namespace dictybase --set [ARGS] --set image.tag=latest --setimage.pullPolicy=IfNotPresent`
 
