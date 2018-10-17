@@ -20,16 +20,48 @@ All frontend web applications are built using [React](https://facebook.github.io
   ```
   "precommit": "lint-staged"
   ```
-Then add this to your `package.json` as well:
+  Then add this to your `package.json` as well:
   ```
   "husky": {
     "hooks": {
-      "precommit": "lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   ```
 
 + **[.editorconfig](https://editorconfig.org/)** - Add our [.editorconfig](https://github.com/dictybase-playground/dev-notes/blob/master/.editorconfig) file into the root directory of your application. This helps maintain a consistent coding style between editors.
+
++ **[Semantic versioning](https://github.com/semantic-release/semantic-release)** - Install the following:
+`npm i -D commitizen semantic-release @semantic-release/changelog @semantic-release/git`
+
+  Add the following to `package.json`:
+  ```
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release": {
+    "noCi": true,
+    "tagFormat": "${version}",
+    "verifyConditions": [
+      "@semantic-release/changelog",
+      "@semantic-release/git"
+    ],
+    "prepare": [
+      "@semantic-release/changelog"
+    ],
+    "publish": [
+      "@semantic-release/github"
+    ]
+  }
+  ```
+
+  And these into your `package.json` scripts:
+  ```
+  "cz": "git-cz",
+  "semantic-release": "semantic-release"
+  ```
 
 + **[Static type checking with Flow](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-flow)** -  Use [flow-typed](https://github.com/flowtype/flow-typed) to add support for 3rd party libraries. Also make sure to ignore the
   `node_modules` folder in the `.flowconfig` file. Here's what a basic config file should look like:
