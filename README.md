@@ -23,6 +23,7 @@
 ### Golang
 
 * [Go by Example](https://gobyexample.com/)
+* [Effective Go](https://golang.org/doc/effective_go.html)
 
 ### Testing
 
