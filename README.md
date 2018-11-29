@@ -22,7 +22,7 @@
 
 ### Golang
 
-* Run GO applications from the command line by using `/` before the name of the binary.
+* [Go by Example](https://gobyexample.com/)
 
 ### Testing
 
