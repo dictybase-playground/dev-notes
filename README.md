@@ -81,9 +81,7 @@ Questions to ask for test "contracts":
 * [The Twelve-Factor App](https://12factor.net/)
 * [Introduction to Docker](http://blog.brew.com.hk/introduction-to-docker/)
 * [Kubernetes In-Browser Course](https://www.katacoda.com/courses/kubernetes)
-
-* Running webapp locally in Docker:
-- `docker run -it -p 9595:9595 [BUILD]`
+* Running webapp locally in Docker: `docker run -it -p 9595:9595 [BUILD]`
 
 **Workflow:**
 1. Push changes to develop
@@ -113,11 +111,3 @@ Questions to ask for test "contracts":
 
 ### Production concepts
 * Analyze bundle size: `source-map-explorer build/static/js/main.*`
-
-### Problem Solving Process
-
-* Write down how you want to approach the problem
-* Outline how you want to solve it
-* How do you expect it to be solved?
-* Do the problem and see how it is actually solved
-* See if anything differs
