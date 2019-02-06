@@ -1,19 +1,19 @@
 Install minikube
 
 ```
-brew cask install minikube
+$ brew cask install minikube
 ```
 
 Verify kubectl is installed
 
 ```
-kubectl version
+$ kubectl version
 ```
 
 If not, install that
 
 ```
-brew install kubernetes-cli
+$ brew install kubernetes-cli
 ```
 
 Install the [Hyperkit Driver](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver)
@@ -21,13 +21,13 @@ Install the [Hyperkit Driver](https://github.com/kubernetes/minikube/blob/master
 Start Minikube with RBAC, Hyperkit and specific Kubernetes version
 
 ```
-minikube start --cpus=4 --memory=4096 --disk-size=30g --vm-driver=hyperkit --kubernetes-version=v1.10.12 --bootstrapper=kubeadm --extra-config=apiserver.authorization-mode=RBAC
+$ minikube start --cpus=4 --memory=4096 --disk-size=30g --vm-driver=hyperkit --kubernetes-version=v1.10.12 --extra-config=apiserver.authorization-mode=RBAC
 ```
 
 Install helm
 
 ```
-brew install kubernetes-helm
+$ brew install kubernetes-helm
 ```
 
 Create `rbac-config.yaml` file for RBAC config
@@ -65,7 +65,7 @@ $ helm init --service-account tiller
 Add dictybase helm repository
 
 ```
-helm repo add dictybase https://dictybase-docker.github.io/kubernetes-charts
+$ helm repo add dictybase https://dictybase-docker.github.io/kubernetes-charts
 ```
 
 Follow along with the rest of the [deployment guide](https://github.com/dictyBase/Migration/blob/master/deploy.md).
@@ -132,6 +132,6 @@ rules:
 ```
 
 Use kubectl to add each
-* `kubectl apply -f account.yaml`
-* `kubectl apply -f rolebinding.yaml`
-* `kubectl apply -f role.yaml`
+* `$ kubectl apply -f account.yaml`
+* `$ kubectl apply -f rolebinding.yaml`
+* `$ kubectl apply -f role.yaml`
