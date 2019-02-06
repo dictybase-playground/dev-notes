@@ -132,6 +132,6 @@ rules:
 ```
 
 Use kubectl to add each
-`kubectl apply -f account.yaml`
-`kubectl apply -f rolebinding.yaml`
-`kubectl apply -f role.yaml`
+* `kubectl apply -f account.yaml`
+* `kubectl apply -f rolebinding.yaml`
+* `kubectl apply -f role.yaml`
