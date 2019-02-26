@@ -89,10 +89,10 @@ Questions to ask for test "contracts":
 3. Upgrade your chart
 
 *Quick workflow:*
-1. Build it in your machine with any tag
+1. Build it in your machine with any tag (i.e. `docker build -t eric/user-exp:dev1 .`)
 2. Push it to the Minikube Docker daemon (activate with `eval $(minikube docker-env)`)
 3. Upgrade your chart with that particular tag
-- `helm install [CHART] --namespace dictybase --set [ARGS] --set image.tag=latest --setimage.pullPolicy=IfNotPresent`
+- `helm install [CHART] --namespace dictybase [ARGS] --set image.repository=eric/user-exp --set image.tag=dev1 --setimage.pullPolicy=IfNotPresent`
 
 **Dev/prod workflow:**
 1. Push to `develop` -> new image -> pull and test in minikube
@@ -100,10 +100,6 @@ Questions to ask for test "contracts":
 3. New image -> Sidd deploys it to staging cloud
 
 *Remember* update the staging dockerfile as necessary
-
-### Specifications
-
-* [JSON API](http://jsonapi.org/)
 
 ### HTTP Programming
 
