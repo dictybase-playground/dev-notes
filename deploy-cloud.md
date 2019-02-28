@@ -71,6 +71,11 @@ clusterrolebinding "tiller" created
 $ helm init --service-account tiller
 ```
 
+Note: you could also pass in the URL for the stored yaml file like so:
+```
+$ kubectl create -f https://raw.githubusercontent.com/dictybase-docker/kubernetes-charts/master/helm-rbac/rbac-config.yaml
+```
+
 * Add dictybase helm repository
 
 ```
