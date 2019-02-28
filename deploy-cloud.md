@@ -137,7 +137,7 @@ Use kubectl to add each
 * `$ kubectl apply -f rolebinding.yaml`
 * `$ kubectl apply -f role.yaml`
 
-* Need to add config files for ArangoDB as well.
+Need to add config files for ArangoDB as well.
 
 * adb-account.yaml
 ```
