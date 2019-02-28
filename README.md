@@ -1,6 +1,7 @@
 # Useful notes for Dicty web development
 
 * [List of projects Eric has worked on](https://github.com/dictybase-playground/dev-notes/blob/master/Eric's%20Projects.md)
+* [Notes for cloud deployment](https://github.com/dictybase-playground/dev-notes/blob/master/deploy-cloud.md)
 
 ### dicty specific
 
