@@ -18,6 +18,14 @@ $ brew install kubernetes-cli
 
 * Install the [Hyperkit Driver](https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver)
 
+```
+brew install docker-machine-driver-hyperkit
+
+# docker-machine-driver-hyperkit need root owner and uid 
+sudo chown root:wheel /usr/local/opt/docker-machine-driver-hyperkit/bin/docker-machine-driver-hyperkit
+sudo chmod u+s /usr/local/opt/docker-machine-driver-hyperkit/bin/docker-machine-driver-hyperkit
+```
+
 * Start Minikube with RBAC, Hyperkit and specific Kubernetes version
 
 ```
@@ -71,7 +79,7 @@ $ helm repo add dictybase https://dictybase-docker.github.io/kubernetes-charts
 
 * Follow along with the rest of the [deployment guide](https://github.com/dictyBase/Migration/blob/master/deploy.md).
 
-* For Nats, you need to add these three config files.
+For Nats, you need to add these three config files.
 
 * account.yaml
 ```
