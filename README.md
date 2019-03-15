@@ -91,9 +91,10 @@ Questions to ask for test "contracts":
 
 *Quick workflow:*
 1. Build it in your machine with any tag (i.e. `docker build -t eric/user-exp:dev1 .`)
+- Note: if Dockerfile is not in root path, use `docker build -f build/Dockerfile -t eric/user-exp:dev1 .`)
 2. Push it to the Minikube Docker daemon (activate with `eval $(minikube docker-env)`)
 3. Upgrade your chart with that particular tag
-- `helm install [CHART] --namespace dictybase [ARGS] --set image.repository=eric/user-exp --set image.tag=dev1 --setimage.pullPolicy=IfNotPresent`
+- `helm install [CHART] --namespace dictybase [ARGS] --set image.repository=eric/user-exp --set image.tag=dev1 --set image.pullPolicy=IfNotPresent`
 
 **Dev/prod workflow:**
 1. Push to `develop` -> new image -> pull and test in minikube
