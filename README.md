@@ -8,6 +8,14 @@
 * [Documentation for frontend development](https://gist.github.com/cybersiddhu/bc9025e4413c3e3dbf748d3916c7039e#file-frontend-development-md) - both web apps and standalone components
 * [Deployment guide](https://github.com/dictyBase/Migration/blob/master/deploy.md)
 * [gdrive-image-uploadr](https://github.com/dictybase-playground/gdrive-image-uploadr/tree/develop) - has all of the standards to be used in React applications
+* **Color scheme** - (in order from dark to light):
+  - #004080 (darkest, used in header and footer)
+  - #0059b3 (halfway point between this and medium, which is kind of bright)
+  - #0073e6 (medium)
+  - #3399ff
+  - #80c1ff
+  - #cce6ff
+  - #e6f2ff (lightest)
 
 ### Creating new releases
 
@@ -47,7 +55,7 @@ Questions to ask for test "contracts":
 ### React concepts
 
 * [React Patterns](https://reactpatterns.com/)
-* [A gentle Introduction to React's Higher Order Components](https://www.robinwieruch.de/gentle-introduction-higher-order-components/)
+* [A Gentle Introduction to React's Higher Order Components](https://www.robinwieruch.de/gentle-introduction-higher-order-components/)
 
 ### Node.js
 
@@ -57,11 +65,6 @@ Questions to ask for test "contracts":
 ### Markdown
 
 * [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
-
-### Documentation
-
-* [React](https://reactjs.org/docs/hello-world.html)
-* [Redux](https://redux.js.org/)
 
 ### Resources
 
