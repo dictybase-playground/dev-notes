@@ -79,6 +79,7 @@ Questions to ask for test "contracts":
 - Delete local branch: `git branch -d branchName`
 - Delete remote branch: `git push origin --delete branchName`
 - Rebase while in `develop`: `git rebase branchName`
+- Exclude folder from search: `git grep XYZ ':!docs'`
 
 ### DevOps
 
