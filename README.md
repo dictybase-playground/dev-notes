@@ -106,10 +106,3 @@ Questions to ask for test "contracts":
 3. New image -> Sidd deploys it to staging cloud
 
 *Remember* update the staging dockerfile as necessary
-
-### HTTP Programming
-
-* [List of HTTP response status codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
-
-### Production concepts
-* Analyze bundle size: `source-map-explorer build/static/js/main.*`
