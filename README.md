@@ -29,6 +29,9 @@
 * To delete local tag, run `git tag -d tagName`
 * To delete remote tag, run `git push --delete origin tagName`
 
+5. If updating or creating helm chart, create a tarball with `helm package PATH_TO_CHART`
+6. Put this tarball in the `docs` folder in [kubernetes-charts](https://github.com/dictybase-docker/kubernetes-charts) repo and then run `helm repo index ./docs` to update the `index.yaml` file. 
+
 ### Golang
 
 * [Go by Example](https://gobyexample.com/)
