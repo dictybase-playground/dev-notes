@@ -30,7 +30,37 @@
 * To delete remote tag, run `git push --delete origin tagName`
 
 5. If updating or creating helm chart, create a tarball with `helm package PATH_TO_CHART`
-6. Put this tarball in the `docs` folder in [kubernetes-charts](https://github.com/dictybase-docker/kubernetes-charts) repo and then run `helm repo index ./docs` to update the `index.yaml` file. 
+6. Put this tarball in the `docs` folder in [kubernetes-charts](https://github.com/dictybase-docker/kubernetes-charts) repo and then run `helm repo index ./docs` to update the `index.yaml` file.
+
+**Workflow:**
+1. Push changes to develop
+2. Wait for Docker Hub to build it.
+3. Upgrade your chart
+
+*Quick workflow:*
+1. Build it in your machine with any tag (i.e. `docker build -t eric/user-exp:dev1 .`)
+- Note: if Dockerfile is not in root path, use `docker build -f build/Dockerfile -t eric/user-exp:dev1 .`)
+2. Push it to the Minikube Docker daemon (activate with `eval $(minikube docker-env)`)
+3. Upgrade your chart with that particular tag
+- `helm upgrade [RELEASE NAME] [CHART] --namespace dictybase [ARGS] --set image.repository=eric/user-exp --set image.tag=dev1 --set image.pullPolicy=IfNotPresent`
+
+**Dev/prod workflow:**
+1. Push to `develop` -> new image -> pull and test in minikube
+2. Rebase `develop` in `master`, create new tag and push both `master` and tag
+3. New image -> Sidd deploys it to staging cloud
+
+*Remember* update the staging dockerfile as necessary
+
+### Git
+
+* [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) - branching model for Git
+
+- Delete last commit: `git reset --hard HEAD^`
+- Delete last commit on remote branch: `git push origin +branchName`
+- Delete local branch: `git branch -d branchName`
+- Delete remote branch: `git push origin --delete branchName`
+- Rebase while in `develop`: `git rebase branchName`
+- Exclude folder from search: `git grep XYZ ':!docs'`
 
 ### Golang
 
@@ -59,11 +89,10 @@ Questions to ask for test "contracts":
 ### React concepts
 
 * [React Patterns](https://reactpatterns.com/)
-* [A Gentle Introduction to React's Higher Order Components](https://www.robinwieruch.de/gentle-introduction-higher-order-components/)
 
 ### Node.js
 
-* [A guide to create a NodeJS command-line package](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e)
+* [A guide to create a Node.js command-line package](https://medium.com/netscape/a-guide-to-create-a-nodejs-command-line-package-c2166ad0452e)
 * [Node.js Best Practices](https://github.com/i0natan/nodebestpractices)
 
 ### Markdown
@@ -74,39 +103,9 @@ Questions to ask for test "contracts":
 
 * [Mark Erikson's react-redux-links](https://github.com/markerikson/react-redux-links)
 
-### Git
-
-* [GitFlow](https://datasift.github.io/gitflow/IntroducingGitFlow.html) - branching model for Git
-
-- Delete last commit: `git reset --hard HEAD^`
-- Delete last commit on remote branch: `git push origin +branchName`
-- Delete local branch: `git branch -d branchName`
-- Delete remote branch: `git push origin --delete branchName`
-- Rebase while in `develop`: `git rebase branchName`
-- Exclude folder from search: `git grep XYZ ':!docs'`
-
 ### DevOps
 
 * [The Twelve-Factor App](https://12factor.net/)
 * [Introduction to Docker](http://blog.brew.com.hk/introduction-to-docker/)
 * [Kubernetes In-Browser Course](https://www.katacoda.com/courses/kubernetes)
 * Running webapp locally in Docker: `docker run -it -p 9595:9595 [BUILD]`
-
-**Workflow:**
-1. Push changes to develop
-2. Wait for Docker Hub to build it.
-3. Upgrade your chart
-
-*Quick workflow:*
-1. Build it in your machine with any tag (i.e. `docker build -t eric/user-exp:dev1 .`)
-- Note: if Dockerfile is not in root path, use `docker build -f build/Dockerfile -t eric/user-exp:dev1 .`)
-2. Push it to the Minikube Docker daemon (activate with `eval $(minikube docker-env)`)
-3. Upgrade your chart with that particular tag
-- `helm upgrade [RELEASE NAME] [CHART] --namespace dictybase [ARGS] --set image.repository=eric/user-exp --set image.tag=dev1 --set image.pullPolicy=IfNotPresent`
-
-**Dev/prod workflow:**
-1. Push to `develop` -> new image -> pull and test in minikube
-2. Rebase `develop` in `master`, create new tag and push both `master` and tag
-3. New image -> Sidd deploys it to staging cloud
-
-*Remember* update the staging dockerfile as necessary
