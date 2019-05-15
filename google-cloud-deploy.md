@@ -91,19 +91,6 @@ database:
 
 >`$_> helm install dictybase/arango-create-database --namespace dictybase -f new-db.yaml`
 
-#### Add backends
-
-- make sure to use the previously created user (i.e. the one you set while creating the database)
-
-```shell
-$_> helm install dictybase/stock-api-server --namespace dictybase \
-    --set database.name=stock --set database.user=george \
-    --set database.password=costanza
-$_> helm install dictybase/order-api-server --namespace dictybase \
-    --set database.name=order --set database.user=george \
-    --set database.password=costanza
-```
-
 ### PostgreSQL
 
 - Quick deploy
