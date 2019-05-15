@@ -104,6 +104,24 @@ $_> helm install dictybase/order-api-server --namespace dictybase \
     --set database.password=costanza
 ```
 
+### PostgreSQL
+
+- Quick deploy
+
+```shell
+$_> helm install dictybase/dictycontent-postgres --namespace dictybase \
+		--set postgresPassword=somepass  \
+		--set dictycontentPassword=someotherpass \ 
+		--set dictyuserPassword=someotherpass \ 
+```
+
+#### Schema loaders
+
+```shell
+$_> helm install dictybase/dictycontent-schema --namespace dictybase
+$_> helm install dictybase/dictyuser-schema --namespace dictybase
+```
+
 ### GraphQL
 
 - Add GraphQL server
