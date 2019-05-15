@@ -122,6 +122,31 @@ $_> helm install dictybase/dictycontent-schema --namespace dictybase
 $_> helm install dictybase/dictyuser-schema --namespace dictybase
 ```
 
+### API Services
+
+#### `Content`
+> `$_> helm install dictybase/content-api-server --namespace dictybase \`   
+>		`--set apiHost=https://betaapi.dictybase.local`
+
+#### `User`
+> $_> `helm install dictybase/user-api-server --namespace dictybase \`   
+>		`--set apiHost=https://betaapi.dictybase.local`
+
+#### `Order`
+```shell
+$_> helm install dictybase/order-api-server --namespace dictybase \
+    --set database.name=order --set database.user=george \
+    --set database.password=costanza
+```
+
+#### `Stock`
+```shell
+$_> helm install dictybase/stock-api-server --namespace dictybase \
+    --set database.name=stock --set database.user=george \
+    --set database.password=costanza
+```
+
+
 ### GraphQL
 
 - Add GraphQL server
