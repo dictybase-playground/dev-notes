@@ -1,5 +1,32 @@
 # List of development projects Eric has worked on
 
+## 2018-19
+
+### Web applications
+
+* [dicty-frontpage](https://github.com/dictyBase/dicty-frontpage)
+* [Dicty Stock Center](https://github.com/dictyBase/Dicty-Stock-Center)
+* [Publication](https://github.com/dictyBase/publication)
+* [Genomepage](https://github.com/dictyBase/Genomepage)
+* [dictyAccess](https://github.com/dictybase/dictyaccess)
+
+### Backend (Golang)
+
+* [GraphQL Server](https://github.com/dictyBase/graphql-server)
+* [modware-order](https://github.com/dictyBase/modware-order)
+* [modware-stock](https://github.com/dictyBase/modware-stock)
+* [event-messenger](https://github.com/dictyBase/event-messenger/tree/develop)
+* [Arangoadmin](https://github.com/dictybase-docker/arangoadmin)
+* [Arangomanager](https://github.com/dictyBase/arangomanager)
+
+### Golang scripts
+* [go-file-readers](https://github.com/dictybase-playground/go-file-readers) (various scripts made while learning Go)
+
+### Misc
+* [GraphQL Schema](https://github.com/dictyBase/graphql-schema)
+
+## 2017-18
+
 ### Web applications
 
 * [Dicty Stock Center](https://github.com/dictyBase/Dicty-Stock-Center)
