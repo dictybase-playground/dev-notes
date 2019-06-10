@@ -24,6 +24,7 @@
 
 ### Misc
 * [GraphQL Schema](https://github.com/dictyBase/graphql-schema)
+* [dictybaseapis](https://github.com/dictyBase/dictybaseapis) (protocol buffers)
 
 ## 2017-18
 
