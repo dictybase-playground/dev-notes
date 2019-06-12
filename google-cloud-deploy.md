@@ -112,14 +112,12 @@ $_> helm install dictybase/dictyuser-schema --namespace dictybase
 
 #### `Content`
 ```shell
-$_> helm install dictybase/content-api-server --namespace dictybase \
-		--set apiHost=https://betaapi.dictybase.local
+$_> helm install dictybase/content-api-server --namespace dictybase
 ```
 
 #### `User`
 ```shell
-$_> helm install dictybase/user-api-server --namespace dictybase \
-		--set apiHost=https://betaapi.dictybase.local
+$_> helm install dictybase/user-api-server --namespace dictybase
 ```
 
 #### `Identity`
@@ -131,7 +129,6 @@ database:
 ```
 ```shell
 $_> helm install dictybase/identity-api-server -f identity.yaml --namespace dictybase \
-    --set apiHost=https://betaapi.dictybase.local \
     --set image.tag=0.6.0
 ```
 
