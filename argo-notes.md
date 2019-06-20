@@ -3,14 +3,24 @@
 I set up a Nodejs test runner Dockerfile [here](https://github.com/dictybase-playground/argo-test/blob/develop/node-test-runner/Dockerfile). 
 It is on the [Docker Hub](https://cloud.docker.com/u/dictybase/repository/docker/dictybase/argotest) with the `dev` tag.
 
-It is my understanding that you cannot pass defined arguments through the Argo 
-workflow. Because of this, I have updated the Dockerfile to use `ENV`. This seems 
-to work if the `ENV` in the Dockerfile is also given default values. Here is [an example](https://ericargo.dictybase.dev/workflows/argo-events/github-wx4dd?tab=workflow&nodeId=github-wx4dd) 
-of a workflow that succeeded with this format.
+After some revisions, the Dockerfile now has a `CMD` of `npm`, which  allows the 
+workflow config to give it an argument of `test`. This will trigger `npm test` and 
+put the log of this command in the automatically generated workflow pod (i.e. `github-27cqv`).
 
-However, nothing is being logged this way. It does not show the logs from the 
-Docker container being built. Need to determine a way to see the output of the 
-tests being ran during this build.
+This works with the defined event source and sensor configurations listed below.
+
+However, there is one glaring issue -- the workflow-provided environmental variables 
+(`GITHUB_CLONE_URL` and `GITHUB_REPO_NAME`) are not overriding the default envs 
+set inside the Dockerfile. So every time the workflow is triggered, it just runs the 
+same tests for `dicty-frontpage`, which is the default for the env inside the Dockerfile.
+
+Perhaps this could be fixed with a multi-stage build? It doesn't appear that you 
+can pass multiple `command` keys to the same `template` in a Workflow config, otherwise I would suggest 
+maybe having multiple `CMD`s in the Dockerfile, one for `git clone`, one for `npm`, etc. and 
+then refer to those in the Workflow. That would allow the ENV to be passed as a parameter instead.
+
+This example seems to be really close to having the desired output, but the Dockerfile 
+needs to be able to handle all arguments and environmental variables defined in a Workflow.
 
 ### event-source
 
@@ -23,59 +33,8 @@ metadata:
     # do not remove
     argo-events-event-source-version: v0.10
 data:
-  dev-notes: |-
-    # ID of the GitHub webhook
-    # this needs to match the one you generated
-    id: 117982148
-    owner: "dictybase-playground"
-    repository: "dev-notes"
-    # Github will send events to the following port and endpoint
-    hook:
-     endpoint: "/github/dev-notes"
-     port: "12000"
-     # url the gateway will use to register at GitHub
-     url: "https://ericargo.dictybase.dev"
-    # type of events to listen to
-    events:
-    - "*"
-    # apiToken refers to K8s secret that stores the github personal access token
-    apiToken:
-      # Name of the K8s secret that contains the access token
-      name: github-access
-      # Corresponding key in the K8s secret
-      key: apiToken
-    # webHookSecret refers to K8s secret that stores the webhook secret
-    webHookSecret:
-      name: github-access
-      key: webHookSecret
-    # type of connection between gateway and github
-    insecure: false
-    # determines if notifications are sent when the webhook is triggered
-    active: true
-    contentType: "json"
-
-  argotest: |-
-    id: 117990339
-    owner: "dictybase-playground"
-    repository: "argo-test"
-    hook:
-     endpoint: "/github/argo-test"
-     port: "12000"
-     url: "https://ericargo.dictybase.dev"
-    events:
-    - "push"
-    apiToken:
-      name: github-argotest
-      key: apiToken
-    webHookSecret:
-      name: github-argotest
-      key: webHookSecret
-    insecure: false
-    active: true
-    contentType: "json"
-
   dicty-stock-center: |-
-    id: 118239400
+    id: 118239462
     owner: "dictyBase"
     repository: "Dicty-Stock-Center"
     hook:
@@ -121,8 +80,6 @@ spec:
       serviceAccountName: argo-events-sa
   dependencies:
     # name matching event sensor
-    # - name: "github-gateway:dev-notes"
-    # - name: "github-gateway:argotest"
     - name: "github-gateway:dicty-stock-center"
   eventProtocol:
     type: "HTTP"
@@ -157,18 +114,17 @@ spec:
                   - name: name
                 container:
                   image: dictybase/argotest:dev
+                  command: [npm]
+                  args: ["test"]
                   env:
                   - name: GITHUB_CLONE_URL
                     value: "{{inputs.parameters.clone-url}}"
                   - name: GITHUB_REPO_NAME
                     value: "{{inputs.parameters.name}}"
       resourceParameters:
-        # - src:
-        #     event: "github-gateway:dev-notes"
-        #   dest: spec.arguments.parameters.0.value
         - src:
             event: "github-gateway:dicty-stock-center"
-            path: "repository.clone_url"
+            path: "head_commit.url"
             # value:
           dest: spec.arguments.parameters.0.value
         - src:
@@ -177,7 +133,3 @@ spec:
             # value:
           dest: spec.arguments.parameters.1.value
 ```
-
-Also needed to set up clusterrole for argo service account.
-
-`kubectl create clusterrolebinding argo-events --clusterrole=cluster-admin --serviceaccount=argo-events:default`
