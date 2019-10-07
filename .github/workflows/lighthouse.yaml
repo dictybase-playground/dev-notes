@@ -11,14 +11,14 @@ jobs:
         uses: actions/checkout@v1
       - name: Read files
         uses: docker://dictybase/snapshot-upload:test
-      - name: Audit live URL
-        uses: docker://dictybase/lighthouse-audit:comment
-        with:
-          url: "https://eric.dictybase.dev/publication/26088819"
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      - name: Upload results as an artifact
-        uses: actions/upload-artifact@master
-        with:
-          name: report
-          path: "./report"
+      # - name: Audit live URL
+      #   uses: docker://dictybase/lighthouse-audit:comment
+      #   with:
+      #     url: "https://eric.dictybase.dev/publication/26088819"
+      #   env:
+      #     GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      # - name: Upload results as an artifact
+      #   uses: actions/upload-artifact@master
+      #   with:
+      #     name: report
+      #     path: "./report"
