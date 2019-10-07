@@ -7,6 +7,8 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
+      - name: Read files
+        uses: docker://dictybase/snapshot-upload:test
       - name: Audit live URL
         uses: docker://dictybase/lighthouse-audit:comment
         with:
