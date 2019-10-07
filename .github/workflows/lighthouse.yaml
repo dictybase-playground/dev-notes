@@ -7,6 +7,8 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
+      - name: check out code
+        uses: actions/checkout@v1
       - name: Read files
         uses: docker://dictybase/snapshot-upload:test
       - name: Audit live URL
