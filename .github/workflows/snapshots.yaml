@@ -11,7 +11,7 @@ jobs:
       - name: check out code
         uses: actions/checkout@v1
       - name: upload snapshots to minio
-        uses: docker://dictybase/snapshot-upload:app
+        uses: docker://dictybase/snapshot-upload:print
         with:
           args: "minio --folder ./reports"
         env:
