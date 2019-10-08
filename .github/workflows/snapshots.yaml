@@ -1,0 +1,19 @@
+name: Node CI
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  snapshots:
+    # needs: build
+    runs-on: ubuntu-18.04
+    steps:
+      - name: check out code
+        uses: actions/checkout@v1
+      - name: upload snapshots to minio
+        uses: docker://dictybase/snapshot-upload:app
+        with:
+          args: "minio --folder ./reports"
+        env:
+          MINIO_ACCESS_KEY: ${{ secrets.MINIO_ACCESS_KEY }}
+          MINIO_SECRET_KEY: ${{ secrets.MINIO_SECRET_KEY }}
