@@ -13,7 +13,7 @@ jobs:
       - name: upload snapshots to minio
         uses: docker://dictybase/snapshot-upload:print
         with:
-          args: "minio --folder ./reports"
+          args: "minio --folder reports"
         env:
           MINIO_ACCESS_KEY: ${{ secrets.MINIO_ACCESS_KEY }}
           MINIO_SECRET_KEY: ${{ secrets.MINIO_SECRET_KEY }}

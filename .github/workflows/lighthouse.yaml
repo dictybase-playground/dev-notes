@@ -1,3 +1,17 @@
+name: Node CI
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - develop
+jobs:
+  print:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: print files
+        run: ls
 # name: Audit live site
 # on:
 #   pull_request:
