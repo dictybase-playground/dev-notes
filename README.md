@@ -68,6 +68,7 @@
 * [Effective Go](https://golang.org/doc/effective_go.html)
 * [GO Code Coverage](https://www.sealights.io/test-metrics/go-code-coverage/)
 * [Convert dep to modules](https://itiskj.hatenablog.com/entry/2018/08/30/101017)
+* [Update GO version](https://www.jajaldoang.com/post/how-to-update-golang/)
 
 ### Testing
 
